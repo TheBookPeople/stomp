@@ -86,7 +86,7 @@ module Stomp
       end
 
       raise Stomp::Error::ProtocolErrorEmptyHeaderKey if self.headers.has_key?("")
-      raise Stomp::Error::ProtocolErrorEmptyHeaderValue if (!protocol11p) && self.headers.has_value?("")
+      #raise Stomp::Error::ProtocolErrorEmptyHeaderValue if (!protocol11p) && self.headers.has_value?("")
 
       body_length = -1
 
@@ -117,4 +117,3 @@ module Stomp
   end # class Message
 
 end # module Stomp
-
